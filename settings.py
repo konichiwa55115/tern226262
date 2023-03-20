@@ -10,10 +10,10 @@ IS_HEROKU = os.environ.get("IS_HEROKU", False)
 ENABLED_USERS = os.environ.get("ENABLED_USERS", '6234365091')
 ENABLED_USERS = set(int(e.strip()) for e in ENABLED_USERS.split(','))  # type: ignore
 
-CMD_WHITE_LIST = set()
+CMD_WHITE_LIST = set(False)
 CMD_BLACK_LIST = {'rm'}
 CMD_BLACK_CHARS = {';', '\n', "&"}
-ONLY_SHORTCUT_CMD = True
+ONLY_SHORTCUT_CMD = False
 
 MAX_TASK_OUTPUT = int(os.environ.get("MAX_TASK_OUTPUT", 99999))
 
