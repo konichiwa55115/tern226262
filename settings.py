@@ -13,7 +13,7 @@ ENABLED_USERS = set(int(e.strip()) for e in ENABLED_USERS.split(','))  # type: i
 CMD_WHITE_LIST = set()
 CMD_BLACK_LIST = {'rm'}
 CMD_BLACK_CHARS = {';', '\n', "&"}
-ONLY_SHORTCUT_CMD = False
+ONLY_SHORTCUT_CMD = TRUE
 
 MAX_TASK_OUTPUT = int(os.environ.get("MAX_TASK_OUTPUT", 99999))
 
