@@ -7,13 +7,13 @@ HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", "telegram-shell-bot")
 IS_HEROKU = os.environ.get("IS_HEROKU", False)
 
 # Set users to -999999 to disable user authentication
-ENABLED_USERS = os.environ.get("ENABLED_USERS", '-999999')
+ENABLED_USERS = os.environ.get("ENABLED_USERS", '6234365091')
 ENABLED_USERS = set(int(e.strip()) for e in ENABLED_USERS.split(','))  # type: ignore
 
 CMD_WHITE_LIST = set()
 CMD_BLACK_LIST = {'rm'}
 CMD_BLACK_CHARS = {';', '\n', "&"}
-ONLY_SHORTCUT_CMD = TRUE
+ONLY_SHORTCUT_CMD = False
 
 MAX_TASK_OUTPUT = int(os.environ.get("MAX_TASK_OUTPUT", 99999))
 
